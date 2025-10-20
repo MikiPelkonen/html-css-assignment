@@ -54,8 +54,7 @@ body {
 header {
   background-color: var(--surfacea);
   border: 2px solid red;
-  flex-grow: 1;
-  height: 10rem;
+  display: flex;
 }
 
 main {
@@ -67,4 +66,31 @@ footer {
   border: 2px solid green;
   flex-grow: 1;
   height: 20rem;
+}
+
+nav {
+  font-size: 1.1rem;
+}
+
+/* NAV */
+ul li {
+  list-style-type: none;
+  float: left;
+}
+
+ul li a {
+  border: 1px solid white;
+  display: block;
+  padding: 2rem;
+}
+
+.logo-container {
+  flex-grow: 1;
+}
+
+.logo-container p {
+  display: block;
+  padding: 2rem;
+  font-size: 1.2rem;
+  font-weight: 800;
 }
