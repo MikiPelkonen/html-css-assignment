@@ -1,0 +1,70 @@
+:root {
+  --rosewater: #f5e0dc;
+  --flamingo: #f2cdcd;
+  --pink: #f5c2e7;
+  --mauve: #cba6f7;
+  --red: #f38ba8;
+  --maroon: #eba0ac;
+  --peach: #fab387;
+  --yellow: #f9e2af;
+  --green: #a6e3a1;
+  --teal: #94e2d5;
+  --sky: #89dceb;
+  --sapphire: #74c7ec;
+  --blue: #89b4fa;
+  --lavender: #b4befe;
+  --text: #cdd6f4;
+  --subtext: #bac2de;
+  --subtexta: #a6adc8;
+  --overlay: #9399b2;
+  --overlaya: #7f849c;
+  --overlayb: #6c7086;
+  --surface: #585b70;
+  --surfacea: #45475a;
+  --surfaceb: #313244;
+  --base: #1e1e2e;
+  --base-light: rgba(30, 30, 46, 0.9);
+  --mantle-light: rgba(18, 18, 25, 0.9);
+  --mantle: #181825;
+  --crust: #11111b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--base);
+}
+
+body {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  min-height: 100vh;
+}
+
+header {
+  background-color: var(--surfacea);
+  border: 2px solid red;
+  flex-grow: 1;
+  height: 10rem;
+}
+
+main {
+  border: 2px solid blue;
+  flex-grow: 1;
+}
+
+footer {
+  border: 2px solid green;
+  flex-grow: 1;
+  height: 20rem;
+}
