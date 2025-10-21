@@ -116,3 +116,15 @@ ul li a {
   padding: 1rem;
   background-color: var(--surface);
 }
+
+#contact {
+  display: flex;
+}
+
+#contact .info {
+  flex-grow: 1;
+}
+
+#contact .map {
+  flex-grow: 2;
+}
