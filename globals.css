@@ -70,18 +70,30 @@ footer {
 
 nav {
   font-size: 1.1rem;
+  flex-grow: 1;
+  border: 1px solid pink;
 }
 
 /* NAV */
-ul li {
+ul {
+  height: 100%;
+  width: 100%;
+  border: 1px solid green;
   list-style-type: none;
-  float: left;
+  display: flex;
+  align-items: center;
+}
+
+ul li {
+  height: 100%;
+  flex-grow: 1;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 ul li a {
-  border: 1px solid white;
-  display: block;
-  padding: 2rem;
 }
 
 .logo-container {
