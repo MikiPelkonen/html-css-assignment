@@ -41,6 +41,7 @@ html {
   line-height: 1.6;
   color: var(--text);
   background-color: var(--base);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -94,6 +95,7 @@ ul li {
 }
 
 ul li a {
+  color: var(--mauve);
 }
 
 .logo-container {
@@ -107,14 +109,29 @@ ul li a {
   font-weight: 800;
 }
 
+section {
+  padding: 2rem;
+}
+
+#company img {
+  width: 100%;
+  height: auto;
+}
+
 #products {
   display: flex;
   gap: 1rem;
 }
 
+#products img {
+  width: 100%;
+  height: auto;
+}
+
 #products .card {
-  padding: 1rem;
+  padding: 1.25rem;
   background-color: var(--surface);
+  box-shadow: 1px 2px 10px var(--crust);
 }
 
 #contact {
@@ -127,4 +144,10 @@ ul li a {
 
 #contact .map {
   flex-grow: 2;
+}
+
+hr.divider {
+  margin: 2rem;
+  border-bottom: 1px groove var(--mauve);
+  border-radius: 1px;
 }
