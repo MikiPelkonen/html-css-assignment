@@ -40,7 +40,7 @@ html {
   font-size: 100%;
   line-height: 1.6;
   color: var(--text);
-  background-color: var(--base);
+  background-color: var(--mantle);
   scroll-behavior: smooth;
 }
 
@@ -59,7 +59,7 @@ header {
 }
 
 main {
-  border: 2px solid blue;
+  background-color: var(--base);
   flex-grow: 1;
 }
 
@@ -69,6 +69,55 @@ footer {
   height: 20rem;
 }
 
+footer ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin-left: 1rem;
+}
+
+footer ul li {
+  padding: 2rem;
+}
+
+footer .bottom {
+  margin-top: 3rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+footer .logo {
+  width: 30%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+footer .bottom p {
+  width: 40%;
+  text-align: center;
+}
+
+footer .social-icons {
+  width: 30%;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .social-icons .icon {
+  width: 50px;
+  height: 50px;
+}
+
+footer .social-icons .icon img {
+  width: 100%;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
 nav {
   font-size: 1.1rem;
   flex-grow: 1;
@@ -76,7 +125,7 @@ nav {
 }
 
 /* NAV */
-ul {
+nav ul {
   height: 100%;
   width: 100%;
   border: 1px solid green;
@@ -85,7 +134,7 @@ ul {
   align-items: center;
 }
 
-ul li {
+nav ul li {
   height: 100%;
   flex-grow: 1;
   border: 1px solid white;
@@ -94,7 +143,7 @@ ul li {
   justify-content: center;
 }
 
-ul li a {
+nav ul li a {
   color: var(--mauve);
 }
 
@@ -110,7 +159,21 @@ ul li a {
 }
 
 section {
-  padding: 2rem;
+  padding: 3rem 2rem;
+}
+
+#company {
+  text-align: center;
+}
+
+#company h1 {
+  margin: 8rem 0 3rem 0;
+  font-size: 3rem;
+}
+
+#company p {
+  margin-top: 2rem;
+  text-wrap: balance;
 }
 
 #company img {
@@ -130,8 +193,25 @@ section {
 
 #products .card {
   padding: 1.25rem;
-  background-color: var(--surface);
+  background-color: var(--surfaceb);
   box-shadow: 1px 2px 10px var(--crust);
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+#products .card:hover {
+  transform: scale(1.025);
+  background-color: var(--surfacea);
+}
+
+#products .card figcaption {
+  color: var(--subtexta);
+  font-size: 0.9rem;
+}
+
+#products .card p {
+  text-wrap: pretty;
 }
 
 #contact {
@@ -139,15 +219,25 @@ section {
 }
 
 #contact .info {
-  flex-grow: 1;
+  width: 40%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 #contact .map {
-  flex-grow: 2;
+  width: 60%;
+  padding: 2rem;
+}
+
+#contact .map img {
+  width: 100%;
+  height: auto;
 }
 
 hr.divider {
-  margin: 2rem;
-  border-bottom: 1px groove var(--mauve);
+  margin: 0 2rem;
+  border-bottom: 1px groove var(--surface);
   border-radius: 1px;
 }
