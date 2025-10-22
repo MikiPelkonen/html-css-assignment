@@ -40,7 +40,7 @@ html {
   font-size: 100%;
   line-height: 1.6;
   color: var(--text);
-  background-color: var(--mantle);
+  background-color: var(--crust);
   scroll-behavior: smooth;
 }
 
@@ -53,18 +53,24 @@ body {
 }
 
 header {
-  background-color: var(--surfacea);
-  border: 2px solid red;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 1200px;
+  background-color: var(--base-light);
+  backdrop-filter: blur(20px);
+  border-radius: 4px;
+  box-shadow: 1px 2px 10px var(--crust);
   display: flex;
+  z-index: 10;
 }
 
 main {
-  background-color: var(--base);
+  background-color: var(--mantle);
   flex-grow: 1;
 }
 
 footer {
-  border: 2px solid green;
   flex-grow: 1;
   height: 20rem;
 }
@@ -118,17 +124,19 @@ footer .social-icons .icon img {
   filter: brightness(0) invert(1);
 }
 
+img {
+  border-radius: 4px;
+}
+
 nav {
   font-size: 1.1rem;
   flex-grow: 1;
-  border: 1px solid pink;
 }
 
 /* NAV */
 nav ul {
   height: 100%;
   width: 100%;
-  border: 1px solid green;
   list-style-type: none;
   display: flex;
   align-items: center;
@@ -137,7 +145,6 @@ nav ul {
 nav ul li {
   height: 100%;
   flex-grow: 1;
-  border: 1px solid white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -159,20 +166,24 @@ nav ul li a {
 }
 
 section {
-  padding: 3rem 2rem;
+  scroll-margin-top: 5rem;
+  padding: 2rem;
 }
 
 #company {
+  padding-top: 12rem;
   text-align: center;
 }
 
 #company h1 {
-  margin: 8rem 0 3rem 0;
+  margin-bottom: 4rem;
   font-size: 3rem;
 }
 
 #company p {
-  margin-top: 2rem;
+  font-size: 1.1rem;
+  padding: 3rem 0 2rem 0;
+  color: var(--subtext);
   text-wrap: balance;
 }
 
@@ -184,6 +195,7 @@ section {
 #products {
   display: flex;
   gap: 1rem;
+  padding: 4rem 2rem;
 }
 
 #products img {
@@ -192,9 +204,10 @@ section {
 }
 
 #products .card {
-  padding: 1.25rem;
+  padding: 1.5rem;
   background-color: var(--surfaceb);
   box-shadow: 1px 2px 10px var(--crust);
+  border-radius: 4px;
   transition:
     transform 0.3s ease,
     background-color 0.3s ease;
@@ -208,10 +221,15 @@ section {
 #products .card figcaption {
   color: var(--subtexta);
   font-size: 0.9rem;
+  text-align: right;
 }
 
 #products .card p {
   text-wrap: pretty;
+}
+
+#products .card h3 {
+  margin-bottom: 1rem;
 }
 
 #contact {
@@ -239,5 +257,11 @@ section {
 hr.divider {
   margin: 0 2rem;
   border-bottom: 1px groove var(--surface);
+  border-radius: 1px;
+}
+
+hr.card-divider {
+  margin: 0.5rem 0;
+  border-bottom: 1px groove var(--peach);
   border-radius: 1px;
 }
