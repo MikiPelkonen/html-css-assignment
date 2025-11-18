@@ -2,8 +2,33 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="Metropolia school assignment" />
     <title>HTML & CSS assigment</title>
-    <link rel="stylesheet" href="globals.css" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+    <link rel="preload" href="globals.css" as="style" />
+    <link
+      rel="stylesheet"
+      href="globals.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript><link rel="preload" href="globals.css" /></noscript>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -21,7 +46,15 @@
     <main>
       <section id="company">
         <h1>Company X</h1>
-        <img src="assets/company_info.jpg" alt="Company info" />
+        <picture>
+          <source srcset="assets/company_info.webp" type="image/webp" />
+          <img
+            src="assets/company_info.jpg"
+            alt="Company info"
+            width="1200"
+            height="600"
+            fetchpriority="high"
+        /></picture>
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia quas
           ea incidunt repellat? Provident laudantium eius quia vitae adipisci
@@ -34,7 +67,15 @@
         <div class="card">
           <h2>Product A</h2>
           <figure>
-            <img src="assets/product_a.jpg" alt="First product preview" />
+            <picture>
+              <source srcset="assets/product_a.webp" type="image/webp" />
+              <img
+                src="assets/product_a.jpg"
+                alt="First product preview"
+                width="800"
+                height="600"
+              />
+            </picture>
             <figcaption>Product A</figcaption>
           </figure>
           <hr class="card-divider" />
@@ -48,7 +89,15 @@
         <div class="card">
           <h2>Product B</h2>
           <figure>
-            <img src="assets/product_b.jpg" alt="Second product review" />
+            <picture>
+              <source srcset="assets/product_b.webp" type="image/webp" />
+              <img
+                src="assets/product_b.jpg"
+                alt="Second product review"
+                width="800"
+                height="600"
+              />
+            </picture>
             <figcaption>Product B</figcaption>
           </figure>
           <hr class="card-divider" />
@@ -62,7 +111,15 @@
         <div class="card">
           <h2>Product C</h2>
           <figure>
-            <img src="assets/product_c.jpg" alt="Third product review" />
+            <picture>
+              <source srcset="assets/product_c.webp" type="image/webp" />
+              <img
+                src="assets/product_c.jpg"
+                alt="Third product review"
+                width="400"
+                height="300"
+              />
+            </picture>
             <figcaption>Product C</figcaption>
           </figure>
           <hr class="card-divider" />
@@ -83,7 +140,12 @@
           <p>Karaportti 2<br />02340 Espoo<br />Finland</p>
         </div>
         <div class="map">
-          <img src="assets/contact.jpg" alt="Contact us" />
+          <img
+            src="assets/contact.jpg"
+            alt="Contact us"
+            width="600"
+            height="400"
+          />
         </div>
       </section>
     </main>
@@ -99,13 +161,37 @@
         <p>Copyright (c) 2025 Company X. All Rights Reserved.</p>
         <div class="social-icons">
           <div class="icon">
-            <a><img src="assets/fb.png" alt="Facebook logo" /></a>
+            <a>
+              <picture>
+                <source srcset="assets/fb.webp" type="image/webp" />
+                <img
+                  src="assets/fb.png"
+                  alt="Fb logo"
+                  width="50"
+                  height="50" /></picture
+            ></a>
           </div>
           <div class="icon">
-            <a><img src="assets/ig.png" alt="Instagram logo" /></a>
+            <a>
+              <picture>
+                <source srcset="assets/ig.webp" type="image/webp" />
+                <img
+                  src="assets/ig.png"
+                  alt="Ig logo"
+                  width="50"
+                  height="50" /></picture
+            ></a>
           </div>
           <div class="icon">
-            <a><img src="assets/linkedin.png" alt="Linkedin logo" /></a>
+            <a>
+              <picture>
+                <source srcset="assets/linkedin.webp" type="image/webp" />
+                <img
+                  src="assets/linkedin.png"
+                  alt="Linkedin logo"
+                  width="50"
+                  height="50" /></picture
+            ></a>
           </div>
         </div>
       </div>
