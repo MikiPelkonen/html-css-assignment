@@ -31,172 +31,224 @@
     />
   </head>
   <body>
-    <header>
-      <div class="logo-container">
-        <h2>COMPANY LOGO</h2>
-      </div>
-      <nav>
+    <div id="app">
+      <header>
+        <picture>
+          <source type="image/webp" srcset="company_assets/logo.webp" />
+          <img
+            src="company_assets/company_logo.png"
+            alt="Company logo"
+            width="75"
+            height="75"
+          />
+        </picture>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section id="company">
+          <div class="hero">
+            <picture>
+              <source
+                type="image/webp"
+                srcset="
+                  company_assets/hero_1200.webp 1200w,
+                  company_assets/hero_2400.webp 2400w
+                "
+                sizes="(max-width: 1200px) 100vw, 1200px"
+              />
+              <img
+                src="assets/company_info.jpg"
+                alt="Company info"
+                width="1200"
+                height="600"
+                fetchpriority="high"
+                sizes="(max-width: 1200px) 100vw, 1200px"
+              />
+            </picture>
+            <div class="hero-content">
+              <h1>Company X</h1>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Officia quas ea incidunt repellat? Provident laudantium eius
+                quia vitae adipisci sequi placeat dolorem. Atque quasi impedit
+                ipsam eligendi hic enim aspernatur.
+              </p>
+            </div>
+          </div>
+        </section>
+        <hr class="divider" />
+        <section id="products">
+          <h2>Products</h2>
+          <div class="cards-wrapper">
+            <div class="card">
+              <figure>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="company_assets/product_card_a.webp"
+                  />
+                  <img
+                    src="company_assets/product_card_a.jpg"
+                    alt="First product preview"
+                    width="400"
+                    height="400"
+                  />
+                </picture>
+                <figcaption>Product A</figcaption>
+              </figure>
+              <div class="card-content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                  facere quisquam impedit non eos vel, repellendus, cumque
+                  dolorem. Poluptatibus dolore corrupti sunt voluptas eaque enim
+                  odio accusantium aperiam veniam nisi!
+                </p>
+                <hr class="card-divider" />
+              </div>
+            </div>
+            <div class="card">
+              <figure>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="company_assets/product_card_b.webp"
+                  />
+                  <img
+                    src="company_assets/product_card_b.jpg"
+                    alt="Second product review"
+                    width="400 "
+                    height="400"
+                  />
+                </picture>
+                <figcaption>Product B</figcaption>
+              </figure>
+              <div class="card-content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                  facere quisquam impedit non eos vel, repellendus, cumque
+                  dolorem. Poluptatibus dolore corrupti sunt voluptas eaque enim
+                  odio accusantium aperiam veniam nisi!
+                </p>
+                <hr class="card-divider" />
+              </div>
+            </div>
+            <div class="card">
+              <figure>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcset="company_assets/product_card_c.webp"
+                  />
+                  <img
+                    src="company_assets/product_card_c.jpg"
+                    alt="Third product preview"
+                    width="400"
+                    height="400"
+                  />
+                </picture>
+                <figcaption>Product C</figcaption>
+              </figure>
+              <div class="card-content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+                  facere quisquam impedit non eos vel, repellendus, cumque
+                  dolorem. Poluptatibus dolore corrupti sunt voluptas eaque enim
+                  odio accusantium aperiam veniam nisi!
+                </p>
+                <hr class="card-divider" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr class="divider" />
+        <section id="contact">
+          <h2>Info</h2>
+          <div class="info">
+            <h3>Contact Us</h3>
+            <p><strong>Email:</strong> info@metropolia.fi</p>
+            <p><strong>Phone:</strong> +358 (0)45 666 666</p>
+            <p>Karaportti 2<br />02340 Espoo<br />Finland</p>
+          </div>
+          <picture>
+            <source
+              type="image/webp"
+              srcset="company_assets/new_company_map.webp"
+            />
+            <img
+              src="company_assets/new_company_map.jpg"
+              alt="First product preview"
+              width="600"
+              height="400"
+            />
+          </picture>
+        </section>
+      </main>
+      <footer>
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#products">Products</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
-    </header>
-    <main>
-      <section id="company">
-        <h1>Company X</h1>
-        <picture>
-          <source srcset="assets/company_info_scaled.webp" type="image/webp" />
-          <img
-            src="assets/company_info.jpg"
-            alt="Company info"
-            width="1200"
-            height="600"
-            fetchpriority="high"
-        /></picture>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia quas
-          ea incidunt repellat? Provident laudantium eius quia vitae adipisci
-          sequi placeat dolorem. Atque quasi impedit ipsam eligendi hic enim
-          aspernatur.
-        </p>
-      </section>
-      <hr class="divider" />
-      <section id="products">
-        <div class="card">
-          <h2>Product A</h2>
-          <figure>
+        <hr class="divider" />
+        <div class="bottom">
+          <div class="logo">
             <picture>
-              <source srcset="assets/product_a_scaled.webp" type="image/webp" />
+              <source type="image/webp" srcset="company_assets/logo.webp" />
               <img
-                src="assets/product_a.jpg"
-                alt="First product preview"
-                width="800"
-                height="600"
+                src="company_assets/company_logo.png"
+                alt="Company logo"
+                width="75"
+                height="75"
               />
             </picture>
-            <figcaption>Product A</figcaption>
-          </figure>
-          <hr class="card-divider" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-            facere quisquam impedit non eos vel, repellendus, cumque dolorem
-            voluptatibus dolore corrupti sunt voluptas eaque enim odio
-            accusantium aperiam veniam nisi!
-          </p>
-        </div>
-        <div class="card">
-          <h2>Product B</h2>
-          <figure>
-            <picture>
-              <source srcset="assets/product_b_scaled.webp" type="image/webp" />
-              <img
-                src="assets/product_b.jpg"
-                alt="Second product review"
-                width="800"
-                height="600"
-              />
-            </picture>
-            <figcaption>Product B</figcaption>
-          </figure>
-          <hr class="card-divider" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-            facere quisquam impedit non eos vel, repellendus, cumque dolorem
-            voluptatibus dolore corrupti sunt voluptas eaque enim odio
-            accusantium aperiam veniam nisi!
-          </p>
-        </div>
-        <div class="card">
-          <h2>Product C</h2>
-          <figure>
-            <picture>
-              <source srcset="assets/product_c_scaled.webp" type="image/webp" />
-              <img
-                src="assets/product_c.jpg"
-                alt="Third product review"
-                width="400"
-                height="300"
-              />
-            </picture>
-            <figcaption>Product C</figcaption>
-          </figure>
-          <hr class="card-divider" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-            facere quisquam impedit non eos vel, repellendus, cumque dolorem
-            voluptatibus dolore corrupti sunt voluptas eaque enim odio
-            accusantium aperiam veniam nisi!
-          </p>
-        </div>
-      </section>
-      <hr class="divider" />
-      <section id="contact">
-        <div class="info">
-          <h2>Contact Us</h2>
-          <p><strong>Email:</strong> info@metropolia.fi</p>
-          <p><strong>Phone:</strong> +358 (0)45 666 666</p>
-          <p>Karaportti 2<br />02340 Espoo<br />Finland</p>
-        </div>
-        <div class="map">
-          <picture>
-            <source srcset="assets/contact_scaled.webp" type="image/webp" />
-            <img
-              src="assets/contact.jpg"
-              alt="Contact us"
-              width="600"
-              height="400"
-          /></picture>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <hr class="divider" />
-      <div class="bottom">
-        <div class="logo">Company logo</div>
-        <p>Copyright (c) 2025 Company X. All Rights Reserved.</p>
-        <div class="social-icons">
-          <div class="icon">
-            <a>
-              <picture>
-                <source srcset="assets/fb_icon.webp" type="image/webp" />
-                <img
-                  src="assets/fb.png"
-                  alt="Fb logo"
-                  width="50"
-                  height="50" /></picture
-            ></a>
+            <h2>Company X</h2>
           </div>
-          <div class="icon">
-            <a>
-              <picture>
-                <source srcset="assets/ig_icon.webp" type="image/webp" />
-                <img
-                  src="assets/ig.png"
-                  alt="Ig logo"
-                  width="50"
-                  height="50" /></picture
-            ></a>
-          </div>
-          <div class="icon">
-            <a>
-              <picture>
-                <source srcset="assets/linkedin_icon.webp" type="image/webp" />
-                <img
-                  src="assets/linkedin.png"
-                  alt="Linkedin logo"
-                  width="50"
-                  height="50" /></picture
-            ></a>
+          <p>Copyright (c) 2025 Company X. All Rights Reserved.</p>
+          <div class="social-icons">
+            <div class="icon">
+              <a>
+                <picture>
+                  <source srcset="assets/fb_icon.webp" type="image/webp" />
+                  <img
+                    src="assets/fb.png"
+                    alt="Fb logo"
+                    width="50"
+                    height="50" /></picture
+              ></a>
+            </div>
+            <div class="icon">
+              <a>
+                <picture>
+                  <source srcset="assets/ig_icon.webp" type="image/webp" />
+                  <img
+                    src="assets/ig.png"
+                    alt="Ig logo"
+                    width="50"
+                    height="50" /></picture
+              ></a>
+            </div>
+            <div class="icon">
+              <a>
+                <picture>
+                  <source
+                    srcset="assets/linkedin_icon.webp"
+                    type="image/webp" />
+                  <img
+                    src="assets/linkedin.png"
+                    alt="Linkedin logo"
+                    width="50"
+                    height="50" /></picture
+              ></a>
+            </div>
           </div>
         </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>
